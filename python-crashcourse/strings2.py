@@ -24,9 +24,22 @@ print(id(message2)) #this will only get the id of the last message2 which was as
 
 # indexing
 '''
-I N T E R S T E L L A  R
-0 1 2 3 4 5 6 7 8 9 10 11
+name = I N T E R S T E L  L A  R
+       0 1 2 3 4 5 6 7 8  9 10 11
+                      -4 -3 -2 -1
+
+we can access the index using the square brackets e.g.
+
+name[3] = E
+name[0] = I
+name[11] = R
+
+***if you don't know the length of your string, you can use - negatives to access characters, e.g.
+name[-1] = R
+name[=5] = E
 '''
 
+name = 'INTERSTELLAR'
+name[0]
 
 
