@@ -1,3 +1,5 @@
+# import string
+from string import ascii_lowercase
 
 '''
 https://docs.python.org/3/library/functions.html
@@ -56,19 +58,35 @@ print(message1.strip()) # prints happy FRIDAY
 print(message1.strip().lower()) # prints happy friday
 
 # Find()
+message2="guess what day it is!? it's happy FRIDAY"
+print(message2.find('it')) # will print 15 because it found 'it' on index 15
 
 '''
 '''
 
-# Split()
+# Split() # will separate every word into it's own string separated by commas also viewed as a list data structure
+print(message2.split()) # ['guess', 'what', 'day', 'it', 'is!?', "it's", 'happy', 'FRIDAY']
 
-
-# Join()
+message3="guess-what-day-it-is!?-it's-happy-FRIDAY-!"
+print(message3.split("-")) # will print ['guess', 'what', 'day', 'it', 'is!?', "it's", 'happy', 'FRIDAY', '!']
 
 '''
 '''
 
+# Join() # will put lists into one string, specify what will be the glue, our example it's space e.g. (" ") then .join followed by the iterable or variable name e.g. print(" ".join(message4))
+message4 = ['guess','what','day','it','is!?',"it's",'happy','FRIDAY','!','!'] # will print out guess what day it is!? it's happy FRIDAY ! !
+message5 = ['python','ruby','javascript']
+print(" ".join(message4)) # guess what day it is!? it's happy FRIDAY ! !
+print(" ".join(message5)) # python ruby javascript
 
+#you can join with dashes e.g.
+print("-".join(message4)) # will print guess-what-day-it-is!?-it's-happy-FRIDAY-!-!
 
+'''
+'''
 
+# import string
+print(string.ascii_lowercase)
+
+# import strings imports  all of the constants, so if you just wanted the ascii_lowercase, you would replace `import strings` with `from string import ascii_lowercase` and you don't have to reference the string. in `print(string.ascii_lowercase)`` it would just be `print(ascii_lowercase)`
 

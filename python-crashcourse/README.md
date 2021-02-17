@@ -41,7 +41,6 @@ step size is one by default
 [Link to read more]('https://docs.python.org/3/library/functions.html')
 
 - len()
-
 will also count white spaces, e.g.
 
 greeting = "hello"
@@ -53,7 +52,6 @@ age=20
 `print(len(message)) //prints 12`
 
 - type()
-
 type will tell you the type
 
 `print(type(age)) //prints int`
@@ -111,14 +109,43 @@ message1="       happy FRIDAY       "
 ![](assets/strip.jpg)
 
 - find()
+`message2 = "guess what day it is!? it's happy FRIDAY"`
+`print(message2.find('it')) # will print 15 because it found 'it' on index 15`
 
+** if you're looking for a character that doesn't exist, e.g. 'z' i'll get a -1
+`print(message2.find('z')) # will print -1`
 
 ~
 
 - split()
+will print every word into it's own string separated by commas also viewed as a list data structure, e.g.
+`print(message2.split())` will return
+`['guess', 'what', 'day', 'it', 'is!?', "it's", 'happy', 'FRIDAY']`
 
+** if there's no spaces e.g. just one long string separated by - then you'll get one long string in return e.g.
+![](assets/split.jpg)
+
+** what you can do in that case, is specify to split on the dash e.g.
+
+`message3="guess-what-day-it-is!?-it's-happy-FRIDAY-!"`
+`print(message3.split("-")) # will print ['guess', 'what', 'day', 'it', 'is!?', "it's", 'happy', 'FRIDAY', '!']`
+
+~
 
 - join()
+will put lists into one string, specify what will be the glue, our example it's space e.g. (" ") then .join followed by the iterable or variable name e.g. print(" ".join(message4))
+
+`message4 = ['guess','what','day','it','is!?',"it's",'happy','FRIDAY','!','!']`
+`print(" ".join(message4)) # guess what day it is!? it's happy FRIDAY ! !`
+
+`message5 = ['python','ruby','javascript']`
+
+`print(" ".join(message5)) # python ruby javascript`
+
+** you can join with dashes e.g.
+`print("-".join(message4)) # will print guess-what-day-it-is!?-it's-happy-FRIDAY-!-!`
+
+~
 
 ** You can tell a function vs method by functions being written first like the above as examples
 
@@ -134,6 +161,19 @@ message1="       happy FRIDAY       "
 ```
 
 `print(message1.strip().lower()) # prints happy friday`
+
 ~
 
 - import string
+on top of the page write `import string` which will give you access to a bunch of import strings you can use, without the initial import string you'll get errors
+
+![](assets/import_string.jpg)
+
+import strings imports  all of the constants, so if you just wanted the ascii_lowercase, you would replace `import strings` with `from string import ascii_lowercase`
+
+and you don't have to reference the string. in `print(string.ascii_lowercase)` it would just be `print(ascii_lowercase)`
+
+---
+
+
+
